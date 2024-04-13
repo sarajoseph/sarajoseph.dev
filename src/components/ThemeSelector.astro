@@ -1,0 +1,132 @@
+---
+---
+<div class="theme-selector-container">
+  <input type="checkbox" class="theme-selector" id="themeSelector"/>
+  <label for="themeSelector" class="icon-container">
+    <svg class="svg-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-sun">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+      <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+    </svg>
+    <svg class="svg-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </label>
+</div>
+
+<style>
+  :root {
+    --theme-selector-bg-light: rgba(252, 237, 173, 0.712);
+    --theme-selector-bg-dark: rgb(32 35 42);
+    --sun-icon-bg: linear-gradient(180deg,#ffcc89,#d8860b);
+    --sun-icon-stroke: rgb(255, 255, 255);
+    --sun-icon-fill: rgb(255, 255, 255);
+    --moon-icon-bg: linear-gradient(180deg,#777,#3a3a3a);
+    --moon-icon-stroke: rgb(255, 255, 255);
+    --moon-icon-fill: transparent;
+    --width-icon: 30px;
+    --height-icon: 30px;
+    --transition: .5s;
+
+    input {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      display: none;
+    }
+
+    .theme-selector-container {
+      background-color: var(--theme-selector-bg-light);
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      margin: 5px;
+      padding: 3px;
+      width: 70px;
+    }
+
+    .icon-container {
+      height: var(--height-icon);
+      padding: 3px;
+      position: relative;
+      transition: var(--transition);
+      width: var(--width-icon);
+    }
+    .icon-container:after {
+      background: var(--sun-icon-bg);
+      border-radius: 50%;
+      content: "";
+      height: var(--height-icon);
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: var(--transition);
+      width: var(--width-icon);
+    }
+    .icon-container:active:after{
+      width: 35px;
+    }
+
+    .svg-icon {
+      cursor: pointer;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      width: 23px;
+      z-index: 2;
+    }
+
+    .sun-icon {
+      display: block;
+      fill: var(--sun-icon-fill);
+      stroke: var(--sun-icon-stroke);
+      transition: var(--transition);
+    }
+    .moon-icon {
+      display: none;
+      transition: var(--transition);
+    }
+
+    &[data-theme="dark"]{
+      .theme-selector-container {
+        background-color: var(--theme-selector-bg-dark);
+        justify-content: flex-end;
+      }
+      .icon-container:after {
+        left: 30px;
+        transform: translateX(-100%);
+        background: var(--moon-icon-bg);
+      }
+      .sun-icon {
+        display: none;
+      }
+      .moon-icon {
+        display: block;
+        fill: var(--moon-icon-fill);
+        stroke: var(--moon-icon-stroke);
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  let theme = 'dark'
+  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme')
+  }else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    theme = 'light'
+  }
+
+  const rootElement = document.documentElement
+  rootElement.dataset.theme = theme
+  window.localStorage.setItem('theme', theme)
+
+  document.getElementById('themeSelector').addEventListener('click', () => {
+    theme = theme === 'dark' ? 'light' : 'dark'
+    rootElement.dataset.theme = theme
+    localStorage.setItem('theme', theme)
+  })
+</script>

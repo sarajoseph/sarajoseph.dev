@@ -1,0 +1,75 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none; margin: 0; padding: 0;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+a { text-decoration: none;}
+*, *::before, *::after { box-sizing: border-box;}
+
+:root {
+	/* Variables */
+	--accent: 136, 58, 234;
+	--accent-light: 224, 204, 250;
+	--accent-dark: 49, 10, 101;
+	--accent-gradient: linear-gradient(
+		45deg,
+		rgb(var(--accent)),
+		rgb(var(--accent-light)) 30%,
+		white 60%
+	);
+	--main-bg-color: #fff;
+	--main-text-color: #000;
+	--text-selected-color: #7532943a;
+	&[data-theme="dark"] {
+		--main-bg-color: #13151a;
+		--main-text-color: #fff;
+		--text-selected-color: #9674a588;
+	}
+
+	/* Styles */
+	transition: .5s;
+}
+
+	
+
+html {
+	font-family:
+		Menlo,
+		Monaco,
+		Lucida Console,
+		"Courier New",
+		Courier,
+		monospace;
+	background: var(--main-bg-color);
+	color: var(--main-text-color);
+	font-size: 15px;
+	letter-spacing: -0.025rem;
+
+	::selection {
+		background-color: var(--text-selected-color);
+	}
+
+	body {
+		cursor: default;
+		height: 100vh;
+
+		> header {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		main {
+			margin: auto;
+			padding: 1rem;
+			max-width: 800px;
+			width: 100%;
+			line-height: 1.5;
+		}
+
+		section {
+			padding-block: 30px;
+		}
+	}
+}

@@ -1,3 +1,38 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@css/*": [
+        "src/css/*"
+      ],
+      "@cssglobal": [
+        "src/css/global.css"
+      ],
+      "@cv_es": [
+        "src/json/cv.json"
+      ],
+      "@cv_en": [
+        "src/json/cv_en.json"
+      ],
+      "@cv_ca": [
+        "src/json/cv_ca.json"
+      ],
+      "@i18n/*": [
+        "src/i18n/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+    }
+  }
 }

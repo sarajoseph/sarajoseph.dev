@@ -1,0 +1,264 @@
+{
+  "basics": {
+    "name": "Sara Joseph",
+    "label": "Frontend Developer amb més de 7 años d'experiència",
+    "image": "/me.webp",
+    "email": "sarajosephperez@gmail.com",
+    "phone": "+34 688919039",
+    "url": "https://sarajoseph.dev",
+    "summary": "+7 anys d'experiència com a Desenvolupadora Web. Generant codi per al manteniment i actualització web de clients de diferents sectors. Habituada a treballar en equip.",
+    "location": {
+      "address": "",
+      "postalCode": "08840",
+      "city": "Viladecans",
+      "countryCode": "ES",
+      "region": "España"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "sarajosephperez",
+        "url": "https://linkedin.com/in/sarajosephperez"
+      },
+      {
+        "network": "GitHub",
+        "username": "sarajoseph",
+        "url": "https://github.com/sarajoseph"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "BALIDEA",
+      "position": "Frontend Developer",
+      "city": "Santiago de Compostela",
+      "startDate": "2022-07-01",
+      "endDate": "2023-07-01",
+      "summary": "\u2022 Trabajando en modo remoto en el desarrollo web con Drupal para la agencia de energía danesa Sparenergi.\n\n\u2022 Programación y maquetación de calculadoras que muestran las ventajas y desventajas, inversiones y los ahorros que se obtendrán con los distintos tipos de reformas en las viviendas según los datos introducidos por el usuario."
+    },
+    {
+      "name": "CREALOGIX",
+      "position": "Frontend Developer",
+      "city": "Barcelona",
+      "startDate": "2018-10-01",
+      "endDate": "2022-03-01",
+      "summary": "\u2022 Trabajando en el desarrollo de páginas web para el sector e-retail. Principalmente en el mantenimiento y en el desarrollo de nuevas funcionalidades para Danone España y Portugal.\n\n\u2022 Desarrollo de promociones mensuales.\n\n\u2022 Rediseño anual para mejorar la navegación y apariencia web.\n\n\u2022 Soporte al equipo de marketing para las campañas de emails."
+    },
+    {
+      "name": "USACD",
+      "position": "Frontend Developer",
+      "city": "L'Hospitalet de Llobregat, Barcelona",
+      "startDate": "2018-01-01",
+      "endDate": "2018-10-01",
+      "summary": "\u2022 Desarrollo de campañas de emails y presentaciones de slides con Javascript para sector salud a través de CRM Veeva."
+    },
+    {
+      "name": "MSC Bikes",
+      "position": "Desarrolladora Web y Diseñadora Web",
+      "city": "Gavá, Barcelona",
+      "startDate": "2015-07-07",
+      "endDate": "2017-04-30",
+      "summary": "\u2022 Desarrollo de la página web, intranet y B2B de la empresa.\n\n\u2022 Creación de diseños web con Photoshop e inDesign.\n\n\u2022 Creación del sitio web del outlet con Wordpress y con Prestashop para la tienda online."
+    }
+  ],
+  "education": [
+    {
+    "course": "CFGS Desarrollo de aplicaciones web",
+    "degree": "Técnica superior en desarrollo de aplicaciones web",
+    "institution": "IES Esteve Terradas i Illa",
+    "location": "Cornellà de Llobregat, Barcelona",
+    "startDate": "2012-09-01",
+    "endDate": "2014-05-01"
+    },
+    {
+    "course": "Bachillerato artístico",
+    "degree": "Título de bachiller",
+    "institution": "IES Josep Mestres i Busquets",
+    "location": "Viladecans, Barcelona",
+    "startDate": "2009-09-01",
+    "endDate": "2012-06-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "category": "html"
+    },
+    {
+      "name": "CSS",
+      "category": "css"
+    },
+    {
+      "name": "SASS",
+      "category": "css"
+    },
+    {
+      "name": "Bootstrap",
+      "category": "css"
+    },
+    {
+      "name": "Foundation",
+      "category": "css"
+    },
+    {
+      "name": "Tailwind",
+      "category": "css"
+    },
+    {
+      "name": "JavaScript",
+      "category": "javascript"
+    },
+    {
+      "name": "ReactJS",
+      "category": "javascript"
+    },
+    {
+      "name": "TypeScript",
+      "category": "javascript"
+    },
+    {
+      "name": "jQuery",
+      "category": "javascript"
+    },
+    {
+      "name": "PHP",
+      "category": "backend"
+    },
+    {
+      "name": "SQL",
+      "category": "backend"
+    },
+    {
+      "name": "Git",
+      "category": "git"
+    },
+    {
+      "name": "GitHub",
+      "category": "git"
+    },
+    {
+      "name": "Wordpress"
+    },
+    {
+      "name": "Astro"
+    },
+    {
+      "name": "Figma",
+      "category": "design"
+    },
+    {
+      "name": "Adobe Photoshop",
+      "category": "design"
+    },
+    {
+      "name": "Jira",
+      "category": "management"
+    },
+    {
+      "name": "Trello",
+      "category": "management"
+    },
+    {
+      "name": "Redmine",
+      "category": "management"
+    },
+    {
+      "name": "Scrumwise",
+      "category": "management"
+    },
+    {
+      "name": "Visual Studio Code",
+      "category": "code editor"
+    },
+    {
+      "name": "Sublime Text",
+      "category": "code editor"
+    },
+    {
+      "name": "PHPStorm",
+      "category": "code editor"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Castellano",
+      "level": "Nativo"
+    },
+    {
+      "language": "Catalán",
+      "level": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "level": "C1.1"
+    },
+    {
+      "language": "Alemán",
+      "level": "A1"
+    }
+  ],
+  "projects": [
+    {
+      "name": "mars.codes",
+      "isActive": true,
+      "description": "Historia interactiva con retos de programación para viajar a Marte",
+      "highlights": [
+        "Elige tu propia aventura",
+        "En desarrollo"
+      ],
+      "url": "https://mars.codes"
+    },
+    {
+      "name": "AdventJS",
+      "isActive": true,
+      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
+      "highlights": [
+        "+1 millón de visitas",
+        "Multidioma",
+        "JavaScript & TypeScript"
+      ],
+      "url": "https://adventjs.dev"
+    },
+    {
+      "name": "Codember",
+      "isActive": true,
+      "description": "Juego interactivo de programación con retos y secretos",
+      "highlights": [
+        "+2000 usuarios activos",
+        "Retos para cualquier lenguaje"
+      ],
+      "url": "https://codember.dev"
+    },
+    {
+      "name": "codi.link",
+      "isActive": true,
+      "description": "Playground de código HTML, CSS y JavaScript para compartir",
+      "highlights": [
+        "100k visitas al mes",
+        "Desarrollado por la comunidad"
+      ],
+      "url": "https://codi.link",
+      "github": "https://github.com/midudev/codi.link"
+    },
+    {
+      "name": "Pruebas Técnicas",
+      "isActive": true,
+      "description": "Lista de pruebas técnicas de empresas para practicar programación",
+      "highlights": [
+        "100% gratuito",
+        "+500 soluciones de la comunidad"
+      ],
+      "url": "https://pruebastecnicas.com",
+      "github": "https://github.com/midudev/pruebas-tecnicas"
+    },
+    {
+      "name": "miduConf",
+      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
+      "highlights": [
+        "+15k tickets repartidos",
+        "+50k espectadores en directo"
+      ],
+      "url": "https://miduconf.com"
+    }
+  ]
+}

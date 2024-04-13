@@ -1,0 +1,33 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getI18N } from '@i18n/index';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const dataCV = getI18N({ currentLang });
+const { basics } = dataCV
+---
+
+<section>
+	<h1>
+		{t('hero.greeting')}<br/>
+		{t('hero.mynameis')} <span class="text-gradient">{basics.name}</span>
+	</h1>
+	<p>{basics.summary}</p>
+</section>
+
+<style>
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>

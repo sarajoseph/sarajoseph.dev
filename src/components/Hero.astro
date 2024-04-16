@@ -9,25 +9,50 @@ const { basics } = dataCV
 ---
 
 <section>
+	<h1>{t('hero.greeting')}</h1>
 	<h1>
-		{t('hero.greeting')}<br/>
-		{t('hero.mynameis')} <span class="text-gradient">{basics.name}</span>
+		{t('hero.mynameis')} <p class="my-name">{basics.name}</p>
 	</h1>
-	<p>{basics.summary}</p>
+	<p class="summary">{basics.summary}</p>
 </section>
 
 <style>
+	section {
+		display: flex;
+		align-items: start;
+    flex-direction: column;
+    justify-content: center;
+	}
 	h1 {
-		font-size: 3rem;
+		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
+		display: flex;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
+	p.my-name {
+		border-right: .2rem solid #8f3aff;
+		margin-left: 30px;
+		width: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: typing 5s steps(15) 1s 1 normal both, blink 1s steps(1) 8;
+
+
+		/* background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
-		background-position: 0%;
+		background-position: 0%;	 */	
+	}
+
+	@keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+	}
+	@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 	}
 </style>

@@ -63,13 +63,14 @@ html {
 		main {
 			margin: auto;
 			padding: 1rem;
-			max-width: 800px;
+			max-width: 80%;
 			width: 100%;
 			line-height: 1.5;
-		}
 
-		section {
-			padding-block: 30px;
+			> section {
+				padding-block: 30px;
+				min-height: calc(100vh - 46px);
+			}
 		}
 	}
 }

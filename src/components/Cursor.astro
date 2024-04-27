@@ -2,14 +2,18 @@
 
 <style>
 	.custom-cursor {
-		background-color: #5b3d6a;
-    border-radius: 50%;
-    box-shadow: 0px 0px 50px 50px #5b3d6a;
-    height: 10px;
-		opacity: 0.3;
-    position: fixed;
-    width: 10px;
-		z-index: 9;
+		display: none;
+		@media (width >= 1280px) {
+			display: block;
+			background-color: #5b3d6a;
+			border-radius: 50%;
+			box-shadow: 0px 0px 50px 50px #5b3d6a;
+			height: 10px;
+			opacity: 0.3;
+			position: fixed;
+			width: 10px;
+			z-index: 4;
+		}
 	}
 </style>
 

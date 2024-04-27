@@ -1,0 +1,42 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getI18N } from '@i18n/index';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const dataCV = getI18N({ currentLang });
+const { languages } = dataCV
+---
+
+<section>
+  <h2><i class="ti ti-language"></i> {t('languages.title')}</h2>
+  {
+    languages.map(
+      ({ language, level }) => {
+
+        return (
+          <div>
+            <p>{language}</p>
+            <p>{level}</p>
+          </div>
+        )
+      }
+    )
+  }
+</section>
+
+<style>
+  section {
+    grid-area: languages;
+  }  
+  div {
+    display: grid;
+    grid-template-columns: 25% max-content;
+    grid-template-rows: 1fr;
+    column-gap: 1rem;
+    @media (width >= 1280px) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3rem;
+    }
+  }
+</style>

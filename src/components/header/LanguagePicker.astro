@@ -1,0 +1,137 @@
+---
+import { languages } from '@i18n/ui'
+import { getLangFromUrl, useTranslatedPath, useTranslations } from '@i18n/utils'
+const currentLang = getLangFromUrl(Astro.url)
+const translatePath = useTranslatedPath(currentLang)
+---
+
+<div class="language-picker-container">
+  <button id="languagePickerButton" class="language-picker-button" aria-label="Select your language" aria-expanded="false">
+    <span class={languages[currentLang]['flag']}></span>
+    <span>{currentLang}</span>
+  </button>
+  <div class="language-picker-dropdown">
+    <ul>
+      {
+        Object.entries(languages).map(
+          ([lang]) => {
+            if (lang !== currentLang) {
+              return (
+                <li class="language-picker-item">
+                  <a href={translatePath('/', lang)}>
+                    <span class={languages[lang]['flag']} aria-hidden="true"></span>
+                    <span>{lang.toUpperCase()}</span>
+                  </a>
+                </li>
+              )
+            }
+          }
+        )
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  :root {
+    --language-picker-item-hover-bg-color: rgba(0, 0, 0, 0.034);
+    &[data-theme="dark"] {
+      --language-picker-item-hover-bg-color: rgba(85, 85, 85, 0.33);
+    }
+
+    .fi {
+      border-radius: 100%;
+      font-size: 1rem;
+      margin-right: 5px;
+    }
+
+    .language-picker-container {
+      align-items: center;
+      display: flex;
+      position: relative;
+    }
+    .language-picker-button {
+      background-color: var(--button-secondary-bg-color);
+      border-radius: 5px;
+      border: none;
+      color: var(--button-secondary-text-color);
+      padding: 3px 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      &[aria-expanded=true] + .language-picker-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.2s;
+      }
+      &:hover {
+        background-color: var(--button-secondary-hover-bg-color);
+      }
+    }
+    .language-picker-dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 0.2s, opacity 0.2s;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      background-color: var(--header-bg-color);
+      border-radius: 5px;
+    }
+    .language-picker-item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        align-items: center;
+        color: var(--main-text-color);
+        display: inline-flex;
+        font-size: 1rem;
+        padding: 5px 10px;
+        width: 100%;
+        &:hover {
+          background-color: var(--language-picker-item-hover-bg-color);
+        }
+      }
+      &:first-child a {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      &:last-child a {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  const languagePickerButton = document.getElementById('languagePickerButton')
+
+  function toggleLanguagePicker(bool = null) {
+    let ariaExpanded
+    if (bool) {
+      ariaExpanded = bool
+    } else {
+      ariaExpanded = languagePickerButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+    }
+    
+    languagePickerButton.setAttribute('aria-expanded', ariaExpanded)
+  }
+
+  languagePickerButton.addEventListener('click', function(){
+    toggleLanguagePicker()
+  })
+  
+  // Close language picker when clicking outside it
+  window.addEventListener('click', function(e){
+    const classLanguageButton = 'language-picker-button'    
+    if ( !(e.target.classList.value).includes(classLanguageButton) 
+        && !(e.target.parentElement.classList.value).includes(classLanguageButton) 
+        && languagePickerButton.getAttribute('aria-expanded') === 'true' ) {
+      toggleLanguagePicker('false')
+    }
+  })
+</script>

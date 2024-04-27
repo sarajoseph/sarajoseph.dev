@@ -1,0 +1,47 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getI18N } from '@i18n/index';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const dataCV = getI18N({ currentLang });
+const { skills } = dataCV
+---
+
+<section>
+  <h2><i class="ti ti-code"></i> {t('skills.title')}</h2>
+  <div class="skills-container">
+    {
+      skills.map(
+        ({ name }) => {
+
+          return (
+            <div class="skill-item" set:html={name} />
+          )
+        }
+      )
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    grid-area: skills;
+  }  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+    .skill-item {
+      background-color: var(--button-secondary-bg-color);
+      border-radius: 5px;
+      color: var(--button-secondary-text-color);
+      flex-grow: 1;
+      font-size: .9rem;
+      font-weight: 600;
+      padding: .5rem .8rem;
+      text-align: center;
+    }
+  }
+</style>

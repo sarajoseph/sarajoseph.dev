@@ -1,0 +1,95 @@
+---
+import { languages } from '@i18n/ui'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+import { getI18N } from '@i18n/index'
+
+const currentLang = getLangFromUrl(Astro.url)
+const t = useTranslations(currentLang)
+const dataCV = getI18N({ currentLang })
+const { work } = dataCV
+---
+
+<section id="experience">
+  <h2><i class="ti ti-briefcase"></i> {t('experience.title')}</h2>
+  <div class="articles-container">
+  {
+    work.map(
+      ({ name, startDate, endDate, position, summary }) => {
+        const startYear = new Date(startDate).getFullYear()
+        const startMonth = new Date(startDate).getMonth()+1
+        const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actualidad'
+        const endMonth = new Date(endDate).getMonth()+1
+
+        return (
+          <article>
+            <header>
+              <time 
+                datetime={startDate}
+                data-title={startDate}>
+                  {languages[currentLang]['months'][startMonth]['abr']} {startYear}
+              </time>
+              {" - "}
+              <time 
+                datetime={endDate}
+                data-title={endDate}>
+                  {languages[currentLang]['months'][endMonth]['abr']} {endYear}
+              </time>
+            </header>
+            <div class="work-content">
+              <h3 set:html={name} />
+              <h4 set:html={position} />
+              <ul set:html={summary} />
+            </div>
+          </article>
+        )
+      }
+    )
+  }
+  </div>
+</section>
+
+<style>
+  section {
+    grid-area: experience;
+  }
+  article {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    @media (width >= 768px) {
+      flex-direction: row;
+      gap: 10px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    header {
+      @media (width >= 768px) {
+        flex-basis: 25%;
+      }
+      @media (width >= 1024px) {
+        flex-basis: 20%;
+      }
+      @media (width >= 1280px) {
+        flex-basis: 15%;
+      }
+    }
+    .work-content {
+      @media (width >= 768px) {
+        flex-basis: 75%;
+      }
+      @media (width >= 1024px) {
+        flex-basis: 80%;
+      }
+      @media (width >= 1280px) {
+        flex-basis: 85%;
+      }
+    }
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+  }
+</style>

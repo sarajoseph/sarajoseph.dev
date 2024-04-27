@@ -1,0 +1,115 @@
+<div class="theme-selector-container" id="themeSelector">
+  <input type="checkbox" class="theme-selector"/>
+  <label class="icon-container">
+    <i class="ti ti-sun icon sun-icon"></i>
+    <i class="ti ti-moon icon moon-icon"></i>
+  </label>
+</div>
+
+<style>
+  :root {
+    --theme-selector-height: 30px;
+    --theme-selector-width: 50px;
+    --icon-color: #000;
+    --icon-bg: var(--white);
+    --icon-font-size: 1rem;
+    --width-icon: 24px;
+    --height-icon: 24px;
+    --transition: .5s;
+
+    input {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      display: none;
+    }
+
+    .theme-selector-container {
+      background-color: var(--button-secondary-bg-color);
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      margin: 5px;
+      padding: 3px;
+      height: var(--theme-selector-height);
+      width: var(--theme-selector-width);
+      &:hover {
+        background-color: var(--button-secondary-hover-bg-color);
+      }
+    }
+
+    .icon-container {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      height: var(--height-icon);
+      justify-content: center;
+      padding: 3px;
+      position: relative;
+      transition: var(--transition);
+      width: var(--width-icon);
+    }
+    .icon-container:after {
+      background: var(--icon-bg);
+      border-radius: 50%;
+      content: "";
+      height: var(--height-icon);
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: var(--transition);
+      width: var(--width-icon);
+    }
+
+    .icon {
+      cursor: pointer;
+      z-index: 2;
+      font-size: var(--icon-font-size);
+      color: var(--icon-color);
+      transition: var(--transition);
+    }
+
+    .sun-icon {
+      display: block;
+    }
+    .moon-icon {
+      display: none;
+    }
+
+    &[data-theme="dark"]{
+      .theme-selector-container {
+        justify-content: flex-end;
+      }
+      .icon-container:after {
+        left: var(--width-icon);
+        transform: translateX(-100%);
+      }
+      .sun-icon {
+        display: none;
+      }
+      .moon-icon {
+        display: block;
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  let theme = 'dark'
+  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme')
+  }else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    theme = 'light'
+  }
+
+  const rootElement = document.documentElement
+  rootElement.dataset.theme = theme
+  window.localStorage.setItem('theme', theme)
+
+  document.getElementById('themeSelector').addEventListener('click', () => {
+    theme = theme === 'dark' ? 'light' : 'dark'
+    rootElement.dataset.theme = theme
+    localStorage.setItem('theme', theme)
+  })
+</script>

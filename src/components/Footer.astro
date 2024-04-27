@@ -1,0 +1,54 @@
+---
+import { getLangFromUrl } from '@i18n/utils';
+import { getI18N } from '@i18n/index';
+
+const currentLang = getLangFromUrl(Astro.url);
+const dataCV = getI18N({ currentLang });
+const { basics } = dataCV
+---
+
+<footer>
+	<div class="social-networks-container">
+		{
+			basics.profiles.map(
+				({ network, url, icon }) => {
+					return (
+						<a href={url} target="_blank" aria-label={network}>
+							<span class={icon}></span>
+						</a>
+					)
+				}
+			)
+		}		
+	</div>
+</footer>
+
+<style>
+  :root {
+		--footer-bg-color: rgb(231 231 231);
+		--footer-icon-color: #333;
+    &[data-theme="dark"] {
+			--footer-bg-color: rgb(15 16 20);
+			--footer-icon-color: var(--white);
+    }
+  }
+	footer {
+		align-items: center;
+		background-color: var(--footer-bg-color);
+		display: flex;
+		height: 100px;
+		justify-content: center;
+		margin-top: 30px;
+		.social-networks-container {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			a {
+				color: var(--footer-icon-color);
+				display: inline-flex;
+				font-size: 1.7rem;
+				margin-inline: 5px;
+			}
+		}
+	}
+</style>

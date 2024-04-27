@@ -1,14 +1,12 @@
 {
   "basics": {
     "name": "Sara Joseph",
-    "label": "Frontend Developer con más de 7 años de experiencia",
+    "label": "Frontend Developer with more than 7 years of experience",
     "image": "/me.webp",
     "email": "sarajosephperez@gmail.com",
-    "phone": "+34 688919039",
-    "url": "https://sarajoseph.dev",
-    "summary": "+7 años de experiencia como Desarrolladora Web. Generando código para el mantenimiento y actualización web de clientes de diferentes sectores. Habituada a trabajar en equipo.",
+    "url": "https://sarajoseph.netlify.app",
+    "summary": "+7 years of experience as a web developer. Generating code for web maintenance and updating for clients from different sectors. Used to working in a team.",
     "location": {
-      "address": "",
       "postalCode": "08840",
       "city": "Viladecans",
       "countryCode": "ES",
@@ -18,61 +16,63 @@
       {
         "network": "LinkedIn",
         "username": "sarajosephperez",
-        "url": "https://linkedin.com/in/sarajosephperez"
+        "url": "https://linkedin.com/in/sarajosephperez",
+        "icon": "ti ti-brand-linkedin"
       },
       {
         "network": "GitHub",
         "username": "sarajoseph",
-        "url": "https://github.com/sarajoseph"
+        "url": "https://github.com/sarajoseph",
+        "icon": "ti ti-brand-github"
       }
     ]
   },
   "work": [
     {
-      "name": "BALIDEA",
+      "name": "Balidea",
       "position": "Frontend Developer",
       "city": "Santiago de Compostela",
       "startDate": "2022-07-01",
       "endDate": "2023-07-01",
-      "summary": "\u2022 Trabajando en modo remoto en el desarrollo web con Drupal para la agencia de energía danesa Sparenergi.\n\n\u2022 Programación y maquetación de calculadoras que muestran las ventajas y desventajas, inversiones y los ahorros que se obtendrán con los distintos tipos de reformas en las viviendas según los datos introducidos por el usuario."
+      "summary": "<li>Working remotely on web development with Drupal for the Danish energy agency Sparenergi.</li><li>Programming and layout of calculators that show the advantages and disadvantages, investments and savings that will be obtained with the different types of home renovations according to the data entered by the user.</li>"
     },
     {
-      "name": "CREALOGIX",
+      "name": "Crealogix",
       "position": "Frontend Developer",
       "city": "Barcelona",
       "startDate": "2018-10-01",
       "endDate": "2022-03-01",
-      "summary": "\u2022 Trabajando en el desarrollo de páginas web para el sector e-retail. Principalmente en el mantenimiento y en el desarrollo de nuevas funcionalidades para Danone España y Portugal.\n\n\u2022 Desarrollo de promociones mensuales.\n\n\u2022 Rediseño anual para mejorar la navegación y apariencia web.\n\n\u2022 Soporte al equipo de marketing para las campañas de emails."
+      "summary": "<li>Working on web development for the e-retail sector. Mainly in the maintenance and development of new features for Danone Spain and Portugal.</li><li>Development of monthly promotions.</li><li>Annual redesign to improve web navigation and appearance.</li><li>Support to the marketing team for email campaigns.</li>"
     },
     {
-      "name": "USACD",
+      "name": "Usacd",
       "position": "Frontend Developer",
       "city": "L'Hospitalet de Llobregat, Barcelona",
       "startDate": "2018-01-01",
       "endDate": "2018-10-01",
-      "summary": "\u2022 Desarrollo de campañas de emails y presentaciones de slides con Javascript para sector salud a través de CRM Veeva."
+      "summary": "<li>Development of email campaigns and slide presentations with Javascript for the health sector through Veeva CRM.</li>"
     },
     {
       "name": "MSC Bikes",
-      "position": "Desarrolladora Web y Diseñadora Web",
+      "position": "Web Developer and Web Desigmer",
       "city": "Gavá, Barcelona",
       "startDate": "2015-07-07",
       "endDate": "2017-04-30",
-      "summary": "\u2022 Desarrollo de la página web, intranet y B2B de la empresa.\n\n\u2022 Creación de diseños web con Photoshop e inDesign.\n\n\u2022 Creación del sitio web del outlet con Wordpress y con Prestashop para la tienda online."
+      "summary": "<li>Development of the company's website, intranet and B2B.</li><li>Creation of web designs with Photoshop and inDesign.</li><li>Creation of the outlet website with Wordpress and with Prestashop for the online store.</li>"
     }
   ],
   "education": [
     {
-    "course": "CFGS Desarrollo de aplicaciones web",
-    "degree": "Técnica superior en desarrollo de aplicaciones web",
+    "course": "Advanced Professional Qualification in Web Applications Development (equivalent to HNC)",
+    "degree": "Superior Technique in Web Application Development",
     "institution": "IES Esteve Terradas i Illa",
     "location": "Cornellà de Llobregat, Barcelona",
     "startDate": "2012-09-01",
     "endDate": "2014-05-01"
     },
     {
-    "course": "Bachillerato artístico",
-    "degree": "Título de bachiller",
+    "course": "GCE of Arts",
+    "degree": "General Certificate of Education in Arts",
     "institution": "IES Josep Mestres i Busquets",
     "location": "Viladecans, Barcelona",
     "startDate": "2009-09-01",
@@ -181,19 +181,19 @@
   ],
   "languages": [
     {
-      "language": "Castellano",
-      "level": "Nativo"
+      "language": "Spanish",
+      "level": "Native"
     },
     {
-      "language": "Catalán",
-      "level": "Nativo"
+      "language": "Catalan",
+      "level": "Native"
     },
     {
-      "language": "Inglés",
+      "language": "English",
       "level": "C1.1"
     },
     {
-      "language": "Alemán",
+      "language": "German",
       "level": "A1"
     }
   ],
@@ -220,16 +220,6 @@
       "url": "https://adventjs.dev"
     },
     {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": [
-        "+2000 usuarios activos",
-        "Retos para cualquier lenguaje"
-      ],
-      "url": "https://codember.dev"
-    },
-    {
       "name": "codi.link",
       "isActive": true,
       "description": "Playground de código HTML, CSS y JavaScript para compartir",
@@ -239,26 +229,6 @@
       ],
       "url": "https://codi.link",
       "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": [
-        "100% gratuito",
-        "+500 soluciones de la comunidad"
-      ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": [
-        "+15k tickets repartidos",
-        "+50k espectadores en directo"
-      ],
-      "url": "https://miduconf.com"
     }
   ]
 }

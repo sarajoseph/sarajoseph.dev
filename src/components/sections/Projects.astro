@@ -1,0 +1,43 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getI18N } from '@i18n/index';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const dataCV = getI18N({ currentLang });
+const { projects } = dataCV
+---
+
+<section>
+  <h2>{t('projects.title')}</h2>
+  <div class="projects-container">
+    {
+      projects.map(
+        ({ name }) => {
+
+          return (
+            <div class="project-item" set:html={name} />
+          )
+        }
+      )
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    grid-area: projects;
+    display: none;
+  }
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    .project-item {
+      align-content: center;
+      aspect-ratio: 4 / 2.2;
+      border: 1px solid blue;
+      text-align: center;
+      width: 33.333%;
+    }
+  }
+</style>

@@ -1,0 +1,36 @@
+<div id="scrollToTop" class="scroll-to-top">
+	<i class="ti ti-arrow-narrow-up"></i>
+</div>
+
+<style>
+	.scroll-to-top {
+		align-items: center;
+		background-color: var(--purple-primary);
+		border-radius: 50%;
+		bottom: 2rem;
+		color: var(--white);
+		cursor: pointer;
+		display: none;
+		font-size: 2rem;
+		padding: .5rem;
+		position: fixed;
+		right: 2rem;
+		z-index: 5;
+		&:hover {
+			opacity: .8;
+		}
+	}
+</style>
+
+<script is:inline>
+	const scrollToTop = document.getElementById('scrollToTop')
+	const hero = document.getElementById('hero')
+
+	window.onscroll = () => scrollToTop.style.display = document.documentElement.scrollTop > hero.offsetHeight ? 'flex' : 'none'	
+
+	scrollToTop.addEventListener('click', () => goToTop())
+
+	function goToTop() {
+  	document.documentElement.scrollTop = 0
+	}
+</script>

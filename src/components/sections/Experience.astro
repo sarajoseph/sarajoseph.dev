@@ -9,49 +9,48 @@ const dataCV = getI18N({ currentLang })
 const { work } = dataCV
 ---
 
-<section id="experience">
-  <h2><i class="ti ti-briefcase"></i> {t('experience.title')}</h2>
-  <div class="articles-container">
-  {
-    work.map(
-      ({ name, startDate, endDate, position, summary }) => {
-        const startYear = new Date(startDate).getFullYear()
-        const startMonth = new Date(startDate).getMonth()+1
-        const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actualidad'
-        const endMonth = new Date(endDate).getMonth()+1
+<section>
+  <div class="section-container">
+    <h3><i class="ti ti-briefcase"></i> {t('experience.title')}</h3>
+    <div class="articles-container">
+    {
+      work.map(
+        ({ name, startDate, endDate, position, summary }) => {
+          const startYear = new Date(startDate).getFullYear()
+          const startMonth = new Date(startDate).getMonth()+1
+          const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actualidad'
+          const endMonth = new Date(endDate).getMonth()+1
 
-        return (
-          <article>
-            <header>
-              <time 
-                datetime={startDate}
-                data-title={startDate}>
-                  {languages[currentLang]['months'][startMonth]['abr']} {startYear}
-              </time>
-              {" - "}
-              <time 
-                datetime={endDate}
-                data-title={endDate}>
-                  {languages[currentLang]['months'][endMonth]['abr']} {endYear}
-              </time>
-            </header>
-            <div class="work-content">
-              <h3 set:html={name} />
-              <h4 set:html={position} />
-              <ul set:html={summary} />
-            </div>
-          </article>
-        )
-      }
-    )
-  }
+          return (
+            <article>
+              <header>
+                <time 
+                  datetime={startDate}
+                  data-title={startDate}>
+                    {languages[currentLang]['months'][startMonth]['abr']} {startYear}
+                </time>
+                {" - "}
+                <time 
+                  datetime={endDate}
+                  data-title={endDate}>
+                    {languages[currentLang]['months'][endMonth]['abr']} {endYear}
+                </time>
+              </header>
+              <div class="work-content">
+                <h4 set:html={name} />
+                <h5 set:html={position} />
+                <ul set:html={summary} />
+              </div>
+            </article>
+          )
+        }
+      )
+    }
+    </div>
   </div>
 </section>
 
 <style>
-  section {
-    grid-area: experience;
-  }
   article {
     align-items: flex-start;
     display: flex;

@@ -9,7 +9,7 @@ const { education } = dataCV
 ---
 
 <section>
-  <h2><i class="ti ti-books"></i> {t('education.title')}</h2>
+  <h3><i class="ti ti-books"></i> {t('education.title')}</h3>
   <div class="articles-container">
   {
     education.map(
@@ -33,8 +33,8 @@ const { education } = dataCV
                   {endYear}
               </time>
             </div>
-            <h3>{degree}</h3>
-            <h4>{course}</h4>
+            <h4>{degree}</h4>
+            <h5>{course}</h5>
             <p>{institution}</p>
             <p>{location}</p>
           </article>
@@ -47,6 +47,11 @@ const { education } = dataCV
 
 <style>
   section {
-    grid-area: education;
+    @media (width >= 768px) {
+			flex-basis: 50%;
+    }
+		@media (width >= 1280px) {
+      flex-basis: 35%;
+		}
   }
 </style>

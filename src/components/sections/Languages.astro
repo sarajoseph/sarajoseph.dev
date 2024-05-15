@@ -9,7 +9,7 @@ const { languages } = dataCV
 ---
 
 <section>
-  <h2><i class="ti ti-language"></i> {t('languages.title')}</h2>
+  <h3><i class="ti ti-language"></i> {t('languages.title')}</h3>
   {
     languages.map(
       ({ language, level }) => {
@@ -25,10 +25,15 @@ const { languages } = dataCV
   }
 </section>
 
-<style>
+<style>  
   section {
-    grid-area: languages;
-  }  
+    @media (width >= 768px) {
+			flex-basis: 40%;
+    }
+		@media (width >= 1280px) {
+      flex-basis: 15%;
+		}
+  }
   div {
     display: grid;
     grid-template-columns: 25% max-content;

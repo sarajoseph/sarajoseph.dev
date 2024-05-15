@@ -9,23 +9,29 @@ const { basics } = dataCV
 ---
 
 <section>
-	<h1>
-		{t('hero.greeting')} {t('hero.mynameis')} <span class="my-name">{basics.name}</span>
-	</h1>
-	<p class="summary">{basics.summary}</p>
-	<a href="#experience" class="btn">
-		<i class="ti ti-arrow-down"></i>
-	</a>
+	<div class="section-container">
+		<h1>
+			{t('hero.greeting')} {t('hero.mynameis')} <span class="my-name">{basics.name}</span>
+		</h1>
+		<p class="summary">{basics.summary}</p>
+		<a href="#aboutme" class="btn">
+			<i class="ti ti-arrow-down"></i>
+		</a>
+	</div>
 </section>
 
 <style>
 	section {
-		grid-area: hero;
+		background: var(--hero-bg-linear-gradient), var(--hero-bg-image);
+    background-position: center;
+		background-size: cover;
+	}
+	.section-container {		
 		display: flex;
 		align-items: center;
     flex-direction: column;
     justify-content: center;
-		min-height: calc(100vh - var(--header-height));
+		min-height: calc(100vh);
 		position: relative;
 	}
 	h1 {
@@ -60,7 +66,7 @@ const { basics } = dataCV
 	}
 	.btn {
 		position: absolute;
-		bottom: 0;
+		bottom: 5rem;
 		i {
 			font-size: 2rem;
 			font-weight: 100;

@@ -15,9 +15,9 @@ const { languages } = dataCV
       ({ language, level }) => {
 
         return (
-          <div>
-            <p>{language}</p>
-            <p>{level}</p>
+          <div class="language-item">
+            <p class="language-item-language">{language}</p>
+            <p class="language-item-level">{level}</p>
           </div>
         )
       }
@@ -34,14 +34,23 @@ const { languages } = dataCV
       flex-basis: 15%;
 		}
   }
-  div {
-    display: grid;
-    grid-template-columns: 25% max-content;
-    grid-template-rows: 1fr;
+  .language-item {
+    display: flex;
     column-gap: 1rem;
-    @media (width >= 1280px) {
-      grid-template-columns: 1fr 1fr;
-      column-gap: 3rem;
+    p {
+      flex-basis: 80px;
+    }
+    .language-item-language {
+      flex-grow: 1;
+    }
+    .language-item-level {
+      flex-grow: 5;
+      @media (width >= 768px) {
+        flex-grow: 4;
+      }
+      @media (width >= 1280px) {
+        flex-grow: 1;
+      }
     }
   }
 </style>

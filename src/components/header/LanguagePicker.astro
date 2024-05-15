@@ -1,6 +1,6 @@
 ---
 import { languages } from '@i18n/ui'
-import { getLangFromUrl, useTranslatedPath, useTranslations } from '@i18n/utils'
+import { getLangFromUrl, useTranslatedPath } from '@i18n/utils'
 const currentLang = getLangFromUrl(Astro.url)
 const translatePath = useTranslatedPath(currentLang)
 ---
@@ -121,9 +121,7 @@ const translatePath = useTranslatedPath(currentLang)
     languagePickerButton.setAttribute('aria-expanded', ariaExpanded)
   }
 
-  languagePickerButton.addEventListener('click', function(){
-    toggleLanguagePicker()
-  })
+  languagePickerButton.addEventListener('click', () => toggleLanguagePicker())
   
   // Close language picker when clicking outside it
   window.addEventListener('click', function(e){

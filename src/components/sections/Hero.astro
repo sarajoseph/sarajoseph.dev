@@ -21,8 +21,14 @@ const { basics } = dataCV
 </section>
 
 <style>
+	:root{
+		--btn-focus-color: var(--text-black);
+    &[data-theme="dark"] {
+			--btn-focus-color: var(--white);
+		}
+	}
 	section {
-		background: var(--hero-bg-linear-gradient), var(--hero-bg-image);
+		background: var(--hero-bg-linear-gradient), var(--section-bg-image);
     background-position: center;
 		background-size: cover;
 	}
@@ -65,8 +71,23 @@ const { basics } = dataCV
 		text-align: center;
 	}
 	.btn {
-		position: absolute;
+		background-color: transparent;
+		border-radius: 50%;
+		border: 2px solid var(--purple-primary);
 		bottom: 5rem;
+		color: var(--purple-primary);
+		position: absolute;
+		&:hover {
+			background-color: var(--purple-primary);
+			border-color: var(--purple-primary);
+			color: var(--white);
+			opacity: 1;
+		}		
+		&:focus {
+			border: none;
+			outline: solid var(--btn-focus-color) 2px;
+			color: var(--btn-focus-color);
+		}
 		i {
 			font-size: 2rem;
 			font-weight: 100;
@@ -80,4 +101,12 @@ const { basics } = dataCV
     from { width: 0; }
     to { width: 100%; }
 	}
+
+	
+
+@media (prefers-reduced-motion: reduce) {
+	.my-name {
+		animation: none;
+	}
+}
 </style>

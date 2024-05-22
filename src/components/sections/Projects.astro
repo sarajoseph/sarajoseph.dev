@@ -9,6 +9,7 @@ const { projects } = dataCV
 ---
 
 <section>
+	<div class="section-container">
   <h2>{t('projects.title')}</h2>
   <div class="projects-container">
     {
@@ -22,11 +23,16 @@ const { projects } = dataCV
       )
     }
   </div>
+</div>
 </section>
 
 <style>
   section {
-    display: none;
+    display: none;    
+    padding-block: 4rem;
+		@media (width >= 768px) {
+			padding-block: 6rem;
+		}
   }
   .projects-container {
     display: flex;

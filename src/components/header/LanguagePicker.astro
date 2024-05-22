@@ -35,8 +35,10 @@ const translatePath = useTranslatedPath(currentLang)
 <style>
   :root {
     --language-picker-item-hover-bg-color: rgba(0, 0, 0, 0.034);
+    --focus-color: var(--text-black);
     &[data-theme="dark"] {
       --language-picker-item-hover-bg-color: rgba(85, 85, 85, 0.33);
+      --focus-color: var(--white);
     }
 
     .fi {
@@ -67,6 +69,9 @@ const translatePath = useTranslatedPath(currentLang)
       }
       &:hover {
         background-color: var(--button-secondary-hover-bg-color);
+      }
+      &:focus {
+        outline: solid var(--focus-color) 1px;
       }
     }
     .language-picker-dropdown {

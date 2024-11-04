@@ -4,7 +4,7 @@
     "label": "Frontend Developer with more than 7 years of experience",
     "image": "/me.webp",
     "email": "sarajosephperez@gmail.com",
-    "url": "https://sarajoseph.netlify.app",
+    "url": "https://sarajoseph.vercel.app",
     "summary": "Web Developer with over 7 years of experience. Used to working in a team, generating code for the web maintenance and web updating of clients from different sectors. I am currently looking to work steadily in a company where I can grow and have a long career as a frontend developer.",
     "location": {
       "postalCode": "08840",
@@ -63,6 +63,14 @@
   ],
   "education": [
     {
+    "course": "Bootcamp Frontend React.JS",
+    "degree": "",
+    "institution": "IT Academy of Barcelona Activa",
+    "location": "Cibernàrium-22@, Barcelona",
+    "startDate": "2024-10-01",
+    "endDate": "2024-05-01"
+    },
+    {
     "course": "Advanced Professional Qualification in Web Applications Development (equivalent to HNC)",
     "degree": "Superior Technique in Web Application Development",
     "institution": "IES Esteve Terradas i Illa",
@@ -93,18 +101,6 @@
       "category": "css"
     },
     {
-      "name": "Bootstrap",
-      "category": "css"
-    },
-    {
-      "name": "Foundation",
-      "category": "css"
-    },
-    {
-      "name": "Tailwind",
-      "category": "css"
-    },
-    {
       "name": "JavaScript",
       "category": "javascript"
     },
@@ -119,6 +115,34 @@
     {
       "name": "jQuery",
       "category": "javascript"
+    },
+    {
+      "name": "Vite",
+      "category": "compilador"
+    },
+    {
+      "name": "Vitest",
+      "category": "testing"
+    },
+    {
+      "name": "Tailwind",
+      "category": "css"
+    },
+    {
+      "name": "DaisyUI",
+      "category": "css"
+    },
+    {
+      "name": "Storybook",
+      "category": "css"
+    },
+    {
+      "name": "Bootstrap",
+      "category": "css"
+    },
+    {
+      "name": "Foundation",
+      "category": "css"
     },
     {
       "name": "PHP",
@@ -167,7 +191,7 @@
       "category": "management"
     },
     {
-      "name": "Visual Studio Code",
+      "name": "VS Code",
       "category": "code editor"
     },
     {
@@ -190,7 +214,7 @@
     },
     {
       "language": "English",
-      "level": "C1.1"
+      "level": "B2"
     },
     {
       "language": "German",
@@ -199,36 +223,15 @@
   ],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "Cotravelers",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
+      "description": "Place to find cotravelers, joining trips created by other travelers or creating trips for other travelers to join.",
       "highlights": [
-        "Elige tu propia aventura",
-        "En desarrollo"
+        "In development",
+        "React.JS, TypeScript, Tailwind, Vite, Vitest, Zustand"
       ],
-      "url": "https://mars.codes"
-    },
-    {
-      "name": "AdventJS",
-      "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://adventjs.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": [
-        "100k visitas al mes",
-        "Desarrollado por la comunidad"
-      ],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
+      "url": "https://cotravelers-sarajoseph.vercel.app/en",
+      "github": "https://github.com/sarajoseph/cotravelers"
     }
   ]
 }

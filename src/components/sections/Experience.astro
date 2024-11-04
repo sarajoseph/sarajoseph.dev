@@ -18,19 +18,19 @@ const { work } = dataCV
         ({ name, startDate, endDate, position, summary }) => {
           const startYear = new Date(startDate).getFullYear()
           const startMonth = new Date(startDate).getMonth()+1
-          const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actualidad'
+          const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual'
           const endMonth = new Date(endDate).getMonth()+1
 
           return (
             <article>
               <header>
-                <time 
+                <time
                   datetime={startDate}
                   data-title={startDate}>
                     {languages[currentLang]['months'][startMonth]['abr']} {startYear}
                 </time>
                 {" - "}
-                <time 
+                <time
                   datetime={endDate}
                   data-title={endDate}>
                     {languages[currentLang]['months'][endMonth]['abr']} {endYear}

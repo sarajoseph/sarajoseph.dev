@@ -9,7 +9,7 @@ const dataCV = getI18N({ currentLang });
 const { education } = dataCV
 ---
 
-<section>
+<div>
   <h3><i class="ti ti-books"></i> {t('education.title')}</h3>
   <div class="articles-container">
   {
@@ -45,15 +45,4 @@ const { education } = dataCV
     )
   }
   </div>
-</section>
-
-<style>
-  section {
-    @media (width >= 768px) {
-			flex-basis: 50%;
-    }
-		@media (width >= 1280px) {
-      flex-basis: 35%;
-		}
-  }
-</style>
+</div>

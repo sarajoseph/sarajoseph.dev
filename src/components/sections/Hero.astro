@@ -9,104 +9,105 @@ const { basics } = dataCV
 ---
 
 <section id="hero">
-	<div class="section-container">
-		<h1>
-			{t('hero.greeting')} {t('hero.mynameis')} <span class="my-name">{basics.name}</span>
-		</h1>
-		<p class="summary">{basics.summary}</p>
-		<a href="#aboutme" class="btn">
-			<i class="ti ti-arrow-down"></i>
-		</a>
-	</div>
+  <div class="section-container">
+    <h1>
+      {t('hero.greeting')} {t('hero.mynameis')} <span class="my-name">{basics.name}</span>
+    </h1>
+    <p class="summary">{basics.summary}</p>
+    <a href="#aboutme" class="btn">
+      <i class="ti ti-arrow-down"></i>
+    </a>
+  </div>
 </section>
 
 <style>
-	:root{
-		--btn-focus-color: var(--text-black);
+  :root{
+    --btn-focus-color: var(--text-black);
     &[data-theme="dark"] {
-			--btn-focus-color: var(--white);
-		}
-	}
-	section {
-		background: var(--hero-bg-linear-gradient), var(--section-bg-image);
+      --btn-focus-color: var(--white);
+    }
+  }
+  section {
+    background: var(--hero-bg-linear-gradient), var(--section-bg-image);
     background-position: center;
-		background-size: cover;
-	}
-	.section-container {		
-		display: flex;
-		align-items: center;
+    background-size: cover;
+  }
+  .section-container {
+    display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-		min-height: calc(100vh);
-		position: relative;
-	}
-	h1 {
-		line-height: 1.2;
-		margin-bottom: 1rem;
-		letter-spacing: .2rem;
-		flex-wrap: wrap;		
-		align-items: center;
+    min-height: calc(100vh);
+    position: relative;
+  }
+  h1 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: .2rem;
+    flex-wrap: wrap;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-		display: flex;
-		@media (width >= 768px) {
-    	flex-direction: row;
-		}
-		@media (width >= 1280px) {
-			display: inline-flex;
-		}
-	}
-	.my-name {
-		border-right: .2rem solid transparent;
-		margin-left: 10px;
-		@media (width >= 1280px) {
-			animation: typing 2s steps(25) 1s 1 normal both, blink .7s steps(1) 0s 6;
-			margin-left: 20px;
-			max-width: fit-content;
-			overflow: hidden;
-			white-space: nowrap;
-		}
-	}
-	.summary {
-		text-align: center;
-	}
-	.btn {
-		background-color: transparent;
-		border-radius: 50%;
-		border: 2px solid var(--purple-primary);
-		bottom: 5rem;
-		color: var(--purple-primary);
-		position: absolute;
-		&:hover {
-			background-color: var(--purple-primary);
-			border-color: var(--purple-primary);
-			color: var(--white);
-			opacity: 1;
-		}		
-		&:focus {
-			border: none;
-			outline: solid var(--btn-focus-color) 2px;
-			color: var(--btn-focus-color);
-		}
-		i {
-			font-size: 2rem;
-			font-weight: 100;
-		}
-	}
+    display: flex;
+    @media (width >= 768px) {
+      flex-direction: row;
+    }
+    @media (width >= 1280px) {
+      display: inline-flex;
+    }
+  }
+  .my-name {
+    border-right: .2rem solid transparent;
+    color: var(--purple-primary);
+    margin-left: 10px;
+    @media (width >= 1280px) {
+      animation: typing 2s steps(25) 1s 1 normal both, blink .7s steps(1) 0s 6;
+      margin-left: 20px;
+      max-width: fit-content;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .summary {
+    text-align: center;
+  }
+  .btn {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--purple-primary);
+    bottom: 5rem;
+    color: var(--purple-primary);
+    position: absolute;
+    &:hover {
+      background-color: var(--purple-primary);
+      border-color: var(--purple-primary);
+      color: var(--white);
+      opacity: 1;
+    }
+    &:focus {
+      border: none;
+      outline: solid var(--btn-focus-color) 2px;
+      color: var(--btn-focus-color);
+    }
+    i {
+      font-size: 2rem;
+      font-weight: 100;
+    }
+  }
 
-	@keyframes blink {
-		50% { border-color: var(--blink-color); }
-	}
-	@keyframes typing {
+  @keyframes blink {
+    50% { border-color: var(--blink-color); }
+  }
+  @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
-	}
+  }
 
-	
+
 
 @media (prefers-reduced-motion: reduce) {
-	.my-name {
-		animation: none;
-	}
+  .my-name {
+    animation: none;
+  }
 }
 </style>

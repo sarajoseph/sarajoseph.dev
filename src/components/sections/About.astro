@@ -8,35 +8,49 @@ import Languages from '@components/sections/Languages.astro'
 import Skills from '@components/sections/Skills.astro'
 ---
 <section id="aboutme">
-	<h2>{t('aboutme.title')}</h2>
-	<Experience/>
-	<div class="section-container">
-		<Education/>
-		<Languages/>
-		<Skills/>
-	</div>
+  <h2>{t('aboutme.title')}</h2>
+  <Experience/>
+  <div class="section-container">
+    <div class="column">
+      <Education/>
+    </div>
+    <div class="column">
+      <Languages/>
+      <Skills/>
+    </div>
+
+  </div>
 </section>
 
 <style>
-	section {
+  section {
     padding-block: 4rem;
-		@media (width >= 768px) {
-			padding-block: 6rem;
-		}
-	}
-	.section-container {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		row-gap: 3rem;
-		padding-top: 3rem;
-		@media (width >= 768px) {
-			flex-direction: row;
-			column-gap: 3rem;
-			padding-top: 6rem;
-		}
-		@media (width >= 1280px) {
-			justify-content: space-between;
-		}
-	}
+    @media (width >= 768px) {
+      padding-block: 6rem;
+    }
+  }
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 3rem;
+    padding-top: 3rem;
+    @media (width >= 768px) {
+      flex-direction: row;
+      column-gap: 3rem;
+      padding-top: 6rem;
+    }
+    @media (width >= 1280px) {
+      justify-content: space-between;
+    }
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    row-gap: 3rem;
+    @media (width >= 768px) {
+      column-gap: 3rem;
+    }
+  }
 </style>

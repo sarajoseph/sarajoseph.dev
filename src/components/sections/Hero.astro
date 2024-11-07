@@ -41,19 +41,22 @@ const { basics } = dataCV
     position: relative;
   }
   h1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    justify-content: center;
+    letter-spacing: .2rem;
     line-height: 1.2;
     margin-bottom: 1rem;
-    letter-spacing: .2rem;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
     @media (width >= 768px) {
       flex-direction: row;
+      font-size: 3rem;
     }
     @media (width >= 1280px) {
       display: inline-flex;
+      font-size: 4rem;
     }
   }
   .my-name {
@@ -83,11 +86,6 @@ const { basics } = dataCV
       border-color: var(--purple-primary);
       color: var(--white);
       opacity: 1;
-    }
-    &:focus {
-      border: none;
-      outline: solid var(--btn-focus-color) 2px;
-      color: var(--btn-focus-color);
     }
     i {
       font-size: 2rem;

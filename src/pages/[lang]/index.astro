@@ -1,0 +1,20 @@
+---
+import Home from '@components/Home.astro'
+
+export function getStaticPaths() {
+	const langs = ['ca', 'en']
+  return langs.map((lang) => ({
+    params: { lang }
+  }))
+}
+
+const supportedLangs = ['ca', 'en']
+const { lang } = Astro.params
+
+// Si el idioma no está soportado, redirige a '/'
+if (!supportedLangs.includes(lang)) {
+  return Astro.redirect('/');
+}
+---
+
+<Home/>

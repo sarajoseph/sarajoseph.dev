@@ -1,0 +1,24 @@
+---
+import Project from '@components/Project.astro'
+import { getI18N } from '@i18n/index'
+
+export function getStaticPaths() {
+  const supportedLangs = ['ca', 'en'] // Supported languages
+  const paths = []
+
+  // Get projects for each supported language
+  for (const lang of supportedLangs) {
+    const langDataCV = getI18N({ currentLang: lang })
+
+    langDataCV.projects.forEach((project) => {
+      paths.push({
+        params: { lang, name: project.name.toLowerCase() },
+      })
+    })
+  }
+
+  return paths
+}
+---
+
+<Project />

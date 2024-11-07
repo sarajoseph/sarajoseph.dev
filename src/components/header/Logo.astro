@@ -1,5 +1,10 @@
+---
+import { getLangFromUrl } from '@i18n/utils'
+const currentLang = getLangFromUrl(Astro.url);
+---
+
 <div class="header__logo-container">
-	<a class="header__logo-icon" href=".">
+	<a class="header__logo-icon" href={currentLang === 'es' ? '/' : `/${currentLang}`}>
 		<img src="/assets/images/logo2.png" alt="logo"/>
 	</a>
 	<span class="header__logo-text">Sara Joseph</span>

@@ -225,12 +225,11 @@
     {
       "name": "Cotravelers",
       "isActive": true,
-      "description": "Place to find cotravelers, joining trips created by other travelers or creating trips for other travelers to join.",
-      "highlights": [
-        "In development",
-        "React.JS, TypeScript, Tailwind, Vite, Vitest, Zustand"
-      ],
-      "url": "https://cotravelers-sarajoseph.vercel.app/en",
+      "image": "/assets/images/cotravelers.png",
+      "description": "Project created as a final project idea for the React.JS specialization course I took at IT Academy Barcelona Activa. It is an application to find cotravelers, joining trips created by other travelers or creating trips for other travelers to join.",
+      "shortDescription": "Site to find cotravelers.",
+      "stack": "Vite, ReactJS, Typescript, ChakraUI, Tailwind, Zustand, ESLint, Firebase",
+      "url": "https://cotravelers-sarajoseph.vercel.app",
       "github": "https://github.com/sarajoseph/cotravelers"
     }
   ]

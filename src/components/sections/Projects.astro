@@ -10,25 +10,39 @@ const { projects } = dataCV
 
 <section>
 	<div class="section-container">
-  <h2>{t('projects.title')}</h2>
-  <div class="projects-container">
+    <h2 class="section-title">{t('projects.title')}</h2>
+    <div class="projects-container">
     {
-      projects.map(
-        ({ name }) => {
-
+      projects.map(({ isActive, name, image, shortDescription }) => {
+        if (isActive) {
           return (
-            <div class="project-item" set:html={name} />
+            <div class="project-item" style={`background-image: url('${image}')`}>
+              <div class="project-content">
+                <h3>{name}</h3>
+                <p>{shortDescription}</p>
+                <div class="button">
+                  <a href={currentLang === 'es'
+                      ? `/projects/${name.toLowerCase()}`
+                      : `/${currentLang}/projects/${name.toLowerCase()}`} >
+                    <span class="ti ti-arrow-up-right"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="project-overlay"></div>
+            </div>
           )
         }
-      )
+      })
     }
+    </div>
   </div>
-</div>
 </section>
 
 <style>
+  :root {
+    --projects-separation: .5rem;
+  }
   section {
-    display: none;    
     padding-block: 4rem;
 		@media (width >= 768px) {
 			padding-block: 6rem;
@@ -37,12 +51,89 @@ const { projects } = dataCV
   .projects-container {
     display: flex;
     flex-wrap: wrap;
+    gap: var(--projects-separation);
+    justify-content: start;
+    width: 100%;
     .project-item {
-      align-content: center;
-      aspect-ratio: 4 / 2.2;
-      border: 1px solid blue;
+      align-items: flex-start;
+      aspect-ratio: 345/244;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 5px solid var(--footer-bg-color);
+      color: var(--text-black);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      padding: 3rem 2rem;
+      position: relative;
       text-align: center;
-      width: 33.333%;
+      width: 100%;
+      .project-content,
+      h3{
+        color: #F8F9FA;
+      }
+      .project-content {
+        display: flex;
+        flex-direction: column;
+        opacity: 0%;
+        text-align: left;
+        transition: .5s ease-in-out;
+        width: 100%;
+        z-index: 2;
+      }
+      h3{
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+      }
+      .button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+      }
+      a {
+        align-items: center;
+        color: #222222;
+        background-color: #F5F5F5;
+        border-radius: 100%;
+        display: flex;
+        font-size: 2rem;
+        justify-content: center;
+        padding: .5rem;
+        width: fit-content;
+      }
+      a:hover {
+        color: white;
+        background-color: var(--purple-primary);
+      }
+      .project-overlay {
+        background-color: #222222d0;
+        inset: 0;
+        mix-blend-mode: multiply;
+        opacity: 0%;
+        position: absolute;
+        transition: .5s ease-in-out;
+        z-index: 1;
+      }
+
+      &:hover {
+        .project-content,
+        .project-overlay {
+          opacity: 100%;
+        }
+      }
+      @media (width >= 768px) {
+        flex: 1 1 calc(50% - var(--projects-separation));
+        max-width: calc(50% - var(--projects-separation));
+        width: calc(50% - var(--projects-separation));
+      }
+      @media (width >= 1024px) {
+        flex: 1 1 calc(33.33% - var(--projects-separation));
+        max-width: calc(33.33% - var(--projects-separation));
+        width: calc(33.33% - var(--projects-separation));
+      }
     }
   }
 </style>

@@ -1,0 +1,109 @@
+---
+import { getI18N } from '@i18n/index'
+import Layout from '@layouts/Layout.astro'
+import Header from '@components/header/Header.astro'
+import Footer from '@components/Footer.astro'
+import ScrollToTop from '@/components/ScrollToTop.astro'
+
+const { lang = 'es', name } = Astro.params
+const dataCV = getI18N({ currentLang: lang })
+const project = dataCV.projects.find((p) => p.name.toLowerCase() === name) // Search project by name
+if (!project) return Astro.redirect('/') // Redirection if the project is not founded
+---
+
+<Layout>
+  <Header />
+  <main>
+    <section>
+      <div class="section-container">
+        <h2>{project.name}</h2>
+        <div class="articles-container">
+          <article>
+            <p>{project.description}</p>
+            <div class="stack">
+              <h4>Stack:</h4>
+              <p>{project.stack}</p>
+            </div>
+            <div class="links">
+              <h4>Links:</h4>
+              <div class="links-container">
+                <a href={project.github} target="_blank" aria-label="github">
+                  <span class="ti ti-brand-github"></span>
+                </a>
+                <a href={project.url} target="_blank" aria-label={project.name}>
+                  <span class="ti ti-external-link"></span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <figure>
+            <img src={project.image} />
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <ScrollToTop />
+</Layout>
+
+<style>
+  :root{
+    --image-border-color: #cdcdcd;
+    &[data-theme="dark"] {
+      --image-border-color: #765a89;
+    }
+  }
+  main {
+    min-height: 100%;
+  }
+  section {
+    margin-top: var(--header-height);
+    padding: 2rem 0;
+  }
+  h2 {
+    font-weight: 700;
+    text-align: left;
+    text-transform: capitalize;
+  }
+  .articles-container {
+    flex-direction: column-reverse;
+    row-gap: 0;
+    @media (width >= 768px) {
+			flex-direction: row;
+		}
+  }
+  .stack {
+    padding: 1rem 0 1.5rem;
+  }
+  figure {
+    max-width: 100%;
+    @media (width >= 1024px) {
+      max-width: 40%;
+		}
+  }
+  img {
+    border: 10px solid var(--image-border-color);
+    width: 100%;
+    @media (width >= 768px) {
+      border-width: 15px;
+		}
+  }
+  .links-container {
+    display: flex;
+    gap: 1rem;
+  }
+  a {
+    border: 2px solid #765a89;
+    border-radius: 50px;
+    color: #765a89;
+    display: flex;
+    padding: .5rem .7rem;
+  }
+  a:hover {
+    opacity: .8;
+  }
+  .ti {
+    font-size: 1.5rem;
+  }
+</style>

@@ -9,7 +9,7 @@ const { skills } = dataCV
 ---
 
 <div>
-  <h3><i class="ti ti-code"></i> {t('skills.title')}</h3>
+  <h3 class="section-title"><i class="ti ti-code"></i> {t('skills.title')}</h3>
   <div class="skills-container">
   {
     skills.map( ({ name }) => <div class="skill-item" set:html={name} /> )

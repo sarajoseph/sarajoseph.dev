@@ -12,7 +12,7 @@ blockquote,q { quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
 table { border-collapse: collapse; border-spacing: 0;}
 a { text-decoration: none;}
-a:focus,a:-webkit-any-link:focus-visible { text-decoration: underline; outline: none; }
+a:focus,a:-webkit-any-link:focus-visible { text-decoration: none; outline: none; }
 *, *::before, *::after { box-sizing: border-box;}
 h1,h2,h3,h4,h5,h6{ margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0; font-weight: 400;}
 
@@ -72,7 +72,7 @@ html {
 body {
 	cursor: default;
 	height: 100vh;
-}	
+}
 
 main {
 	display: flex;
@@ -91,32 +91,30 @@ main {
 
 h1 {
 	color: var(--h-text-color);
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	@media (width >= 768px) {
-		font-size: 3rem;
-	}
-	@media (width >= 1280px) {
-		font-size: 4rem;
-	}
 }
 
 h2 {
 	color: var(--h-text-color);
 	font-size: 2rem;
 	font-weight: 700;
+	text-transform: uppercase;
+}
+h2.section-title {
 	margin-bottom: 20px;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 h3 {
-	align-items: center;
 	color: var(--h-text-color);
-	display: inline-flex;
 	font-size: 1.5rem;
 	font-weight: 700;
+}
+h3.section-title {
+	align-items: center;
+	display: inline-flex;
 	justify-content: flex-start;
 	margin-bottom: 20px;
 	width: 100%;
@@ -164,10 +162,6 @@ button {
 	transition: transform .3s;
 	&:hover {
 		transform: translateY(-3px);
-	}
-	&:focus {
-		outline: solid #552e79 2px;
-		text-decoration: underline;
 	}
 }
 

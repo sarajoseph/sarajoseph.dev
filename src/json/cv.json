@@ -225,11 +225,10 @@
     {
       "name": "Cotravelers",
       "isActive": true,
-      "description": "Lugar para encontrar compañeros de viaje, uniendote a viajes creados por otros viajeros o crear viajes para que otros viajeros se unan.",
-      "highlights": [
-        "En desarrollo",
-        "React.JS, TypeScript, Tailwind, Vite, Vitest, Zustand"
-      ],
+      "image": "/assets/images/cotravelers.png",
+      "description": "Proyecto creado como idea de proyecto final del curso de especialización de React.JS que realicé en IT Academy de Barcelona Activa. Se trata de una aplicación para encontrar compañeros de viaje, uniendote a viajes creados por otros viajeros o crear viajes para que otros viajeros se unan.",
+      "shortDescription": "Lugar para encontrar compañeros de viaje.",
+      "stack": "Vite, ReactJS, Typescript, ChakraUI, Tailwind, Zustand, ESLint, Firebase",
       "url": "https://cotravelers-sarajoseph.vercel.app",
       "github": "https://github.com/sarajoseph/cotravelers"
     }

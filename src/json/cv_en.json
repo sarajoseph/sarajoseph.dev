@@ -63,12 +63,12 @@
   ],
   "education": [
     {
-    "course": "Bootcamp Frontend React.JS",
+    "course": "Frontend specialization course with React.JS",
     "degree": "",
     "institution": "IT Academy of Barcelona Activa",
     "location": "Cibernàrium-22@, Barcelona",
-    "startDate": "2024-10-01",
-    "endDate": "2024-05-01"
+    "startDate": "2024-05-01",
+    "endDate": "2024-10-01"
     },
     {
     "course": "Advanced Professional Qualification in Web Applications Development (equivalent to HNC)",

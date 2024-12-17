@@ -63,12 +63,12 @@
   ],
   "education": [
     {
-    "course": "Bootcamp Frontend React.JS",
+    "course": "Curs d'especialització Frontend amb React.JS",
     "degree": "",
     "institution": "IT Academy de Barcelona Activa",
     "location": "Cibernàrium-22@, Barcelona",
-    "startDate": "2024-10-01",
-    "endDate": "2024-05-01"
+    "startDate": "2024-05-01",
+    "endDate": "2024-10-01"
     },
     {
     "course": "CFGS Desenvolupament d'aplicacions web",

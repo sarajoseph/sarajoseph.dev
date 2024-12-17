@@ -37,7 +37,9 @@ if (!project) return Astro.redirect('/') // Redirection if the project is not fo
             </div>
           </article>
           <figure>
-            <img src={project.image} />
+            <a href={project.url} target="_blank" aria-label={project.name}>
+              <img src={project.image} />
+            </a>
           </figure>
         </div>
       </div>
@@ -92,16 +94,16 @@ if (!project) return Astro.redirect('/') // Redirection if the project is not fo
   .links-container {
     display: flex;
     gap: 1rem;
-  }
-  a {
-    border: 2px solid #765a89;
-    border-radius: 50px;
-    color: #765a89;
-    display: flex;
-    padding: .5rem .7rem;
-  }
-  a:hover {
-    opacity: .8;
+    a {
+      border: 2px solid #765a89;
+      border-radius: 50px;
+      color: #765a89;
+      display: flex;
+      padding: .5rem .7rem;
+      &:hover {
+        opacity: .8;
+      }
+    }
   }
   .ti {
     font-size: 1.5rem;

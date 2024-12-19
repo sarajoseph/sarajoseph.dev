@@ -38,7 +38,7 @@ if (!project) return Astro.redirect('/') // Redirection if the project is not fo
           </article>
           <figure>
             <a href={project.url} target="_blank" aria-label={project.name}>
-              <img src={project.image} />
+              <img src={project.image} alt={project.name} loading="lazy" />
             </a>
           </figure>
         </div>

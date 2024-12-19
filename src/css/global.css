@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6{ margin-block-start: 0; margin-block-end: 0; margin-inline-sta
 	--button-secondary-bg-color: #E5E5E5;
 	--button-secondary-text-color: #666;
 	--button-secondary-hover-bg-color: #DFDEDE;
-	--section-bg-image: url('/assets/images/background01.png');
+	--section-bg-image: url('/src/assets/images/background01.png');
 	--hero-bg-linear-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), 60%, rgba(245, 245, 245, 1));
 	--contact-bg-linear-gradient: linear-gradient(to bottom, rgba(245, 245, 245, 1), 10%, rgba(255, 255, 255, 0.8));
 	&[data-theme="dark"] {

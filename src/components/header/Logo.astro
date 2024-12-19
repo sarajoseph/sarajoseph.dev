@@ -5,7 +5,7 @@ const currentLang = getLangFromUrl(Astro.url);
 
 <div class="header__logo-container">
 	<a class="header__logo-icon" href={currentLang === 'es' ? '/' : `/${currentLang}`}>
-		<img src="/assets/images/logo.png" alt="logo"/>
+		<img src="../assets/images/logo.png" alt="logo" loading="lazy"/>
 	</a>
 	<span class="header__logo-text">Sara Joseph</span>
 </div>

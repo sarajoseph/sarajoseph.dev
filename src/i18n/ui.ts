@@ -178,6 +178,9 @@ export const ui = {
     'languages.title': 'Languages',
     'projects.title': 'Projects',
     'skills.title': 'Skills',
+    '404.title': 'Page not found',
+    '404.description': 'Oops! The page you are looking for does not exist or is temporarily unavailable.',
+    '404.button': 'Go to the home page',
   },
   es: {
     'site.title': 'Portfolio de Sara Joseph',
@@ -190,6 +193,9 @@ export const ui = {
     'languages.title': 'Idiomas',
     'projects.title': 'Proyectos',
     'skills.title': 'Skills',
+    '404.title': 'Página no encontrada',
+    '404.description': 'Oops! La página que buscas no existe o no está disponible temporalmente.',
+    '404.button': 'Ir a la página de inicio',
   },
   ca: {
     'site.title': 'Portfoli de Sara Joseph',
@@ -202,5 +208,8 @@ export const ui = {
     'languages.title': 'Idiomes',
     'projects.title': 'Projectes',
     'skills.title': 'Skills',
+    '404.title': 'Pàgina no trobada',
+    '404.description': 'Oops! La pàgina que busques no existeix o no està disponible temporalment.',
+    '404.button': 'Anar a la pàgina d\'inici',
   },
 } as const;

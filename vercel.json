@@ -1,7 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/ca/:path*", "destination": "/" },
-    { "source": "/en/:path*", "destination": "/" },
-    { "source": "/projects/:path*", "destination": "/" }
-  ]
-}

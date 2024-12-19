@@ -1,0 +1,87 @@
+---
+import Footer from '@components/Footer.astro'
+import Header from '@components/header/Header.astro'
+import Layout from '@layouts/Layout.astro'
+import ScrollToTop from '@/components/ScrollToTop.astro'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+
+const currentLang = getLangFromUrl(Astro.url)
+const t = useTranslations(currentLang)
+---
+
+<Layout>
+  <Header/>
+  <main>
+    <section>
+      <div class="notfound-404">
+        <h1>404</h1>
+      </div>
+      <h2>{t('404.title')}</h2>
+      <p>{t('404.description')}</p>
+      <a href={currentLang === 'es' ? '/' : `/${currentLang}`} class="btn">
+        <i class="ti ti-arrow-back-up"></i>
+        {t('404.button')}
+      </a>
+    </section>
+  </main>
+  <Footer/>
+  <ScrollToTop/>
+</Layout>
+
+<style>
+  main {
+    min-height: 100%;
+  }
+  section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--header-height);
+    padding: 2rem;
+    text-align: center;
+  }
+  .notfound-404 {
+    height: 142px;
+    margin-bottom: 2rem;
+    @media (width >= 768px) {
+      height: 280px;
+    }
+  }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 112px;
+    margin: 0;
+    font-weight: 900;
+    background: url('../../public/assets/images/vialactea.png') no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: center;
+    @media (width >= 768px) {
+      font-size: 230px;
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    max-width: 500px;
+  }
+  .btn {
+    border-radius: 2rem;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 4px 15px -5px #654783;
+    box-shadow: 0px 4px 15px -5px #654783;
+    &:hover {
+      background-color: #654783;
+      transition: all 1s;
+    }
+  }
+  .ti-arrow-back-up {
+    font-size: 1.3rem;
+    margin-right: .5rem;
+  }
+</style>

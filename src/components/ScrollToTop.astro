@@ -1,29 +1,30 @@
 <div id="scrollToTop" class="btn scroll-to-top">
-	<i class="ti ti-arrow-narrow-up"></i>
+  <i class="ti ti-arrow-narrow-up"></i>
 </div>
 
 <style>
-	.scroll-to-top {
-		border-radius: 50%;
-		bottom: 2rem;
-		display: none;
-		font-size: 2rem;
-		padding: .5rem;
-		position: fixed;
-		right: 2rem;
-		z-index: 5;
-	}
+  .scroll-to-top {
+    background: linear-gradient(#3d055e, var(--purple-primary));
+    border-radius: 50%;
+    bottom: 2rem;
+    display: none;
+    font-size: 2rem;
+    padding: .5rem;
+    position: fixed;
+    right: 2rem;
+    z-index: 5;
+  }
 </style>
 
 <script is:inline>
-	const scrollToTop = document.getElementById('scrollToTop')
-	const hero = document.getElementById('hero')
+  const scrollToTop = document.getElementById('scrollToTop')
+  const hero = document.getElementById('hero')
 
-	window.onscroll = () => scrollToTop.style.display = document.documentElement.scrollTop > hero.offsetHeight ? 'flex' : 'none'	
+  window.onscroll = () => scrollToTop.style.display = document.documentElement.scrollTop > hero.offsetHeight ? 'flex' : 'none'
 
-	scrollToTop.addEventListener('click', () => goToTop())
+  scrollToTop.addEventListener('click', () => goToTop())
 
-	function goToTop() {
-  	document.documentElement.scrollTop = 0
-	}
+  function goToTop() {
+    document.documentElement.scrollTop = 0
+  }
 </script>

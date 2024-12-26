@@ -1,6 +1,9 @@
 import { defineConfig } from 'astro/config'
 import imagemin from 'vite-plugin-imagemin'
+import react from '@astrojs/react'
+
 export default defineConfig({
+  integrations: [react()],
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en', 'ca'],

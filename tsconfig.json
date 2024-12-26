@@ -10,19 +10,19 @@
         "src/components/*"
       ],
       "@css/*": [
-        "src/css/*"
+        "src/assets/css/*"
       ],
       "@cssglobal": [
-        "src/css/global.css"
+        "src/assets/css/global.css"
       ],
       "@cv_es": [
-        "src/json/cv.json"
+        "src/assets/json/cv.json"
       ],
       "@cv_en": [
-        "src/json/cv_en.json"
+        "src/assets/json/cv_en.json"
       ],
       "@cv_ca": [
-        "src/json/cv_ca.json"
+        "src/assets/json/cv_ca.json"
       ],
       "@i18n/*": [
         "src/i18n/*"

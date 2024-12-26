@@ -10,12 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.1.2",
+    "@emailjs/browser": "^4.4.1",
     "@tabler/core": "^1.0.0-beta20",
     "@tabler/icons": "^3.26.0",
-    "astro": "^5.1.0",
-    "flag-icons": "^7.2.3"
+    "astro": "^5.1.1",
+    "flag-icons": "^7.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tabler-icons-react": "^1.56.0"
   },
   "devDependencies": {
+    "@types/react": "^19.0.2",
     "standard": "17.1.2",
     "vite-plugin-imagemin": "^0.6.1"
   }

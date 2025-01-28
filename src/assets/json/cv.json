@@ -1,17 +1,8 @@
 {
   "basics": {
     "name": "Sara Joseph",
-    "label": "Frontend Developer con más de 7 años de experiencia",
-    "image": "/me.webp",
-    "email": "sarajosephperez@gmail.com",
-    "url": "https://sarajoseph.vercel.app",
-    "summary": "Desarrolladora web con más de 7 años de experiencia. Habituada a trabajar en equipo generando código para el mantenimiento y actualización web de clientes de diferentes sectores. Actualmente busco trabajar de manera estable en una empresa donde poder crecer y tener una larga trayectoria como programadora frontend.",
-    "location": {
-      "postalCode": "08840",
-      "city": "Viladecans",
-      "countryCode": "ES",
-      "region": "España"
-    },
+    "url": "https://sarajoseph.dev",
+    "summary": "+7 años de experiencia como Frontend Developer, creando interfaces de usuario intuitivas y funcionales para clientes de diferentes sectores. Me enfoco en crear soluciones escalables y sostenibles que aporten valor tanto a usuarios como a empresas. Me motiva trabajar en proyectos innovadores que combinen creatividad y tecnología.",
     "profiles": [
       {
         "network": "LinkedIn",
@@ -29,36 +20,36 @@
   },
   "work": [
     {
-      "name": "Balidea",
+      "company": "Balidea",
       "position": "Frontend Developer",
       "city": "Santiago de Compostela",
       "startDate": "2022-07-01",
       "endDate": "2023-07-01",
-      "summary": "<li>Trabajando en modo remoto en el desarrollo web con Drupal para la agencia de energía danesa Sparenergi.</li><li>Programación y maquetación de calculadoras que muestran las ventajas y desventajas, inversiones y los ahorros que se obtendrán con los distintos tipos de reformas en las viviendas según los datos introducidos por el usuario.</li>"
+      "summary": "Colaboré en el desarrollo de calculadoras interactivas para un cliente del sector energético de Dinamarca. Estas herramientas permitían a los usuarios estimar los beneficios de adoptar soluciones energéticas y ayudaron al cliente a promover sus servicios con datos claros y personalizados."
     },
     {
-      "name": "Crealogix",
+      "company": "Crealogix",
       "position": "Frontend Developer",
       "city": "Barcelona",
       "startDate": "2018-10-01",
       "endDate": "2022-03-01",
-      "summary": "<li>Trabajando en el desarrollo de páginas web para el sector e-retail. Principalmente en el mantenimiento y en el desarrollo de nuevas funcionalidades para Danone España y Portugal.</li><li>Desarrollo de promociones mensuales.</li><li>Rediseño anual para mejorar la navegación y apariencia web.</li><li>Soporte al equipo de marketing para las campañas de emails.</li>"
+      "summary": "Participé en el desarrollo de páginas web orientadas al sector e-retail, colaborando principalmente con Danone. Según las necesidades de las campañas de marketing, creaba páginas nuevas o ajustaba las existentes, asegurando que reflejaran las necesidades de comunicación y ofrecieran una experiencia de usuario optimizada. Colaboraba directamente con el equipo de marketing, asegurando que todo estuviera alineado con lo que se quería comunicar, lo que permitió lanzar campañas con tiempos ajustados y ofrecer una buena experiencia al usuario."
     },
     {
-      "name": "Usacd",
+      "company": "Usacd",
       "position": "Frontend Developer",
       "city": "L'Hospitalet de Llobregat, Barcelona",
       "startDate": "2018-01-01",
       "endDate": "2018-10-01",
-      "summary": "<li>Desarrollo de campañas de emails y presentaciones de slides con Javascript para sector salud a través de CRM Veeva.</li>"
+      "summary": "Desarrollé presentaciones interactivas con JavaScript para mostrar productos de clientes del sector salud. Estas presentaciones permitían a los clientes comunicar las características de sus productos de manera visual y dinámica, resolviendo la necesidad de transmitir información técnica de forma atractiva. También desarrollé campañas de email marketing utilizando el CRM Veeva, facilitando la promoción de productos y servicios."
     },
     {
-      "name": "MSC Bikes",
+      "company": "MSC Bikes",
       "position": "Desarrolladora y Diseñadora Web",
       "city": "Gavá, Barcelona",
       "startDate": "2015-07-07",
       "endDate": "2017-04-30",
-      "summary": "<li>Desarrollo de la página web, intranet y B2B de la empresa.</li><li>Creación de diseños web con Photoshop e inDesign.</li><li>Creación del sitio web del outlet con Wordpress y con Prestashop para la tienda online.</li>"
+      "summary": "Participé en el desarrollo y diseño de la página web, la intranet y la plataforma B2B para la gestión de distribuidores y pedidos. Implementé soluciones que mejoraron la experiencia del usuario y fortalecieron la identidad visual de la marca. Estas plataformas permitieron automatizar procesos internos y facilitar la comunicación entre la empresa y sus distribuidores, logrando una mayor eficiencia operativa."
     }
   ],
   "education": [

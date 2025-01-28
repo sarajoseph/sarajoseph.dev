@@ -165,11 +165,13 @@ export const languages = {
 
 export const defaultLang = 'es';
 export const showDefaultLang = false;
+const portfolioURL = 'sarajoseph.dev';
 
 export const ui = {
   en: {
-    'site.title': 'Sara Joseph\'s portfolio',
-    'site.description': 'Sara Joseph\'s portfolio',
+    'site.title': 'Sara Joseph - Frontend Developer',
+    'site.description': 'Hello! I\'m Sara. I have over 7 years of experience developing innovative projects that combine creativity and technology.',
+    'site.url': portfolioURL,
     'hero.greeting': 'Hi!',
     'hero.mynameis': 'I\'m',
     'aboutme.title': 'About me',
@@ -195,8 +197,9 @@ export const ui = {
     '404.button': 'Go to the home page',
   },
   es: {
-    'site.title': 'Portfolio de Sara Joseph',
-    'site.description': 'Portfolio de Sara Joseph',
+    'site.title': 'Sara Joseph - Frontend Developer',
+    'site.description': 'Hola! Soy Sara. Tengo más de 7 años de experiencia desarrollando proyectos innovadores que combinan creatividad y tecnología.',
+    'site.url': portfolioURL,
     'hero.greeting': '¡Hola!',
     'hero.mynameis': 'Soy',
     'aboutme.title': 'Sobre mi',
@@ -222,8 +225,9 @@ export const ui = {
     '404.button': 'Ir a la página de inicio',
   },
   ca: {
-    'site.title': 'Portfoli de Sara Joseph',
-    'site.description': 'Portfoli de Sara Joseph',
+    'site.title': 'Sara Joseph - Frontend Developer',
+    'site.description': 'Hola! Sóc la Sara. Tinc més de 7 anys d\'experiència desenvolupant projectes innovadors que combinen creativitat i tecnologia.',
+    'site.url': portfolioURL,
     'hero.greeting': 'Hola!',
     'hero.mynameis': 'Sóc',
     'aboutme.title': 'Sobre mi',

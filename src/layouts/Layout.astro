@@ -10,13 +10,17 @@ const t = useTranslations(lang);
 <html lang={`${lang}`} translate="no" data-theme>
 	<head>
 		<meta charset="UTF-8" />
+		<title>{t('site.title')}</title>
 		<meta name="description" content={t('site.description')} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="stylesheet" href="/assets/tabler-icons/webfont/tabler-icons.min.css" />
 		<link rel="stylesheet" href="/assets/flag-icons/css/flag-icons.min.css" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{t('site.title')}</title>
+		<meta name="author" content="Sara Joseph" />
+		<meta property="og:title" content={t('site.title')} />
+		<meta property="og:description" content={t('site.description')} />
+		<meta property="og:url" content={t('site.url')} />
 	</head>
 	<body>
 		<slot />

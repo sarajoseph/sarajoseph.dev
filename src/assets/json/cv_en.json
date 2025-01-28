@@ -1,17 +1,8 @@
 {
   "basics": {
     "name": "Sara Joseph",
-    "label": "Frontend Developer with more than 7 years of experience",
-    "image": "/me.webp",
-    "email": "sarajosephperez@gmail.com",
-    "url": "https://sarajoseph.vercel.app",
-    "summary": "Web Developer with over 7 years of experience. Used to working in a team, generating code for the web maintenance and web updating of clients from different sectors. I am currently looking to work steadily in a company where I can grow and have a long career as a frontend developer.",
-    "location": {
-      "postalCode": "08840",
-      "city": "Viladecans",
-      "countryCode": "ES",
-      "region": "España"
-    },
+    "url": "https://sarajoseph.dev",
+    "summary": "+7 years of experience as Frontend Developer, creating intuitive and functional user interfaces for clients from different sectors. I focus on creating scalable and sustainable solutions that bring value to both users and companies. I am motivated to work on innovative projects that combine creativity and technology.",
     "profiles": [
       {
         "network": "LinkedIn",
@@ -29,36 +20,36 @@
   },
   "work": [
     {
-      "name": "Balidea",
+      "company": "Balidea",
       "position": "Frontend Developer",
       "city": "Santiago de Compostela",
       "startDate": "2022-07-01",
       "endDate": "2023-07-01",
-      "summary": "<li>Working remotely on web development with Drupal for the Danish energy agency Sparenergi.</li><li>Programming and layout of calculators that show the advantages and disadvantages, investments and savings that will be obtained with the different types of home renovations according to the data entered by the user.</li>"
+      "summary": "Development of interactive calculators for a client in the Danish energy sector. These tools allowed users to estimate the benefits of adopting energy solutions and helped the client promote its services with clear and personalized data."
     },
     {
-      "name": "Crealogix",
+      "company": "Crealogix",
       "position": "Frontend Developer",
       "city": "Barcelona",
       "startDate": "2018-10-01",
       "endDate": "2022-03-01",
-      "summary": "<li>Working on web development for the e-retail sector. Mainly in the maintenance and development of new features for Danone Spain and Portugal.</li><li>Development of monthly promotions.</li><li>Annual redesign to improve web navigation and appearance.</li><li>Support to the marketing team for email campaigns.</li>"
+      "summary": "I was involved in the development of websites for the e-retail sector, working mainly with Danone. Depending on the needs of the marketing campaigns, I created new pages or adjusted existing ones, ensuring that they reflected the communication needs and offered an optimized user experience. I worked directly with the marketing team, ensuring that everything was aligned with what was to be communicated, which allowed us to launch campaigns within tight timeframes and offer a good user experience."
     },
     {
-      "name": "Usacd",
+      "company": "Usacd",
       "position": "Frontend Developer",
       "city": "L'Hospitalet de Llobregat, Barcelona",
       "startDate": "2018-01-01",
       "endDate": "2018-10-01",
-      "summary": "<li>Development of email campaigns and slide presentations with Javascript for the health sector through Veeva CRM.</li>"
+      "summary": "I developed interactive presentations using JavaScript to showcase products for clients in the healthcare sector. These presentations allowed clients to communicate the features of their products in a visual and dynamic way, solving the need to transmit technical information in an attractive way. I also developed email marketing campaigns using Veeva CRM, facilitating the promotion of products and services."
     },
     {
-      "name": "MSC Bikes",
+      "company": "MSC Bikes",
       "position": "Web Developer and Web Desigmer",
       "city": "Gavá, Barcelona",
       "startDate": "2015-07-07",
       "endDate": "2017-04-30",
-      "summary": "<li>Development of the company's website, intranet and B2B.</li><li>Creation of web designs with Photoshop and inDesign.</li><li>Creation of the outlet website with Wordpress and with Prestashop for the online store.</li>"
+      "summary": "I participated in the development and design of the website, the intranet and the B2B platform for managing distributors and orders. I implemented solutions that improved the user experience and strengthened the brand's visual identity. These platforms allowed the automation of internal processes and facilitated communication between the company and its distributors, achieving greater operational efficiency."
     }
   ],
   "education": [

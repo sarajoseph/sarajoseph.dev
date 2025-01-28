@@ -15,7 +15,7 @@ const { work } = dataCV
     <div class="articles-container">
     {
       work.map(
-        ({ name, startDate, endDate, position, summary }) => {
+        ({ company, city, startDate, endDate, position, summary }) => {
           const startYear = new Date(startDate).getFullYear()
           const startMonth = new Date(startDate).getMonth()+1
           const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual'
@@ -37,9 +37,12 @@ const { work } = dataCV
                 </time>
               </header>
               <div class="work-content">
-                <h4 set:html={name} />
-                <h5 set:html={position} />
-                <ul set:html={summary} />
+                <h4 set:html={position} />
+                <div class="flex">
+                  <h5 set:html={company} />
+                  <p class="sm-text" set:html={', '+city} />
+                </div>
+                <p set:html={summary} />
               </div>
             </article>
           )

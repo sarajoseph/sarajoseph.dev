@@ -222,6 +222,16 @@
       "stack": "Vite, ReactJS, Typescript, ChakraUI, Tailwind, Zustand, ESLint, Firebase",
       "url": "https://cotravelers-sarajoseph.vercel.app",
       "github": "https://github.com/sarajoseph/cotravelers"
+    },
+    {
+      "name": "Bocados",
+      "isActive": true,
+      "image": "/assets/images/bocados.png",
+      "description": "Fictional restaurant website designed as a showcase for potential clients. It features a menu of dishes and drinks, restaurant information, and a contact form, providing an intuitive and engaging experience.",
+      "shortDescription": "Tapas restaurant",
+      "stack": "Vite, ReactJS, Typescript, Sass, ESLint, Firebase",
+      "url": "https://bocados-sarajoseph.vercel.app",
+      "github": "https://github.com/sarajoseph/bocados"
     }
   ]
 }

@@ -218,10 +218,20 @@
       "isActive": true,
       "image": "/assets/images/cotravelers.png",
       "description": "Proyecto creado como idea de proyecto final del curso de especialización de React.JS que realicé en IT Academy de Barcelona Activa. Se trata de una aplicación para encontrar compañeros de viaje, uniendote a viajes creados por otros viajeros o crear viajes para que otros viajeros se unan.",
-      "shortDescription": "Lugar para encontrar compañeros de viaje.",
+      "shortDescription": "Lugar para encontrar compañeros de viaje",
       "stack": "Vite, ReactJS, Typescript, ChakraUI, Tailwind, Zustand, ESLint, Firebase",
       "url": "https://cotravelers-sarajoseph.vercel.app",
       "github": "https://github.com/sarajoseph/cotravelers"
+    },
+    {
+      "name": "Bocados",
+      "isActive": true,
+      "image": "/assets/images/bocados.png",
+      "description": "Web de restaurante ficticio diseñada como demostración para potenciales clientes. Presenta la carta de platos y bebidas, información sobre el restaurante y un formulario de contacto, ofreciendo una experiencia intuitiva y atractiva.",
+      "shortDescription": "Restaurante de tapas",
+      "stack": "Vite, ReactJS, Typescript, Sass, ESLint, Firebase",
+      "url": "https://bocados-sarajoseph.vercel.app",
+      "github": "https://github.com/sarajoseph/bocados"
     }
   ]
 }

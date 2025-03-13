@@ -13,25 +13,24 @@ const { projects } = dataCV
     <h2 class="section-title">{t('projects.title')}</h2>
     <div class="projects-container">
     {
-      projects.map(({ isActive, name, image, shortDescription }) => {
-        if (isActive) {
-          return (
-            <div class="project-item" style={`background-image: url('${image}')`}>
-              <div class="project-content">
-                <h3>{name}</h3>
-                <p>{shortDescription}</p>
-                <div class="button">
-                  <a href={currentLang === 'es'
-                      ? `/projects/${name.toLowerCase()}`
-                      : `/${currentLang}/projects/${name.toLowerCase()}`} >
-                    <span class="ti ti-arrow-up-right"></span>
-                  </a>
-                </div>
+      projects.filter(({ isActive }) => isActive).map(({ name, image, shortDescription, github, url, stackIcons }) => {
+        return (
+          <div class="project-item" style={`background-image: url('${image}')`}>
+            <div class="project-content">
+              <h3>{name}</h3>
+              <div class="icons-container">{stackIcons.map(e => <i class={`ti ti-brand-${e}`} aria-label={`${e} icon`}></i>)}</div>
+              <div class="links-container">
+                <a href={github} target="_blank" aria-label="github">
+                  <span class="ti ti-brand-github"></span>
+                </a>
+                <a href={url} target="_blank" aria-label={name}>
+                  <span class="ti ti-external-link"></span>
+                </a>
               </div>
-              <div class="project-overlay"></div>
             </div>
-          )
-        }
+            <div class="project-overlay"></div>
+          </div>
+        )
       })
     }
     </div>
@@ -77,6 +76,7 @@ const { projects } = dataCV
       .project-content {
         display: flex;
         flex-direction: column;
+        gap: .5rem;
         opacity: 0%;
         text-align: left;
         transition: .5s ease-in-out;
@@ -88,10 +88,24 @@ const { projects } = dataCV
         text-transform: uppercase;
         letter-spacing: .2rem;
       }
-      .button {
+      .icons-container {
         display: flex;
+        gap: .5rem;
+        i {
+          color: #F8F9FA;
+          font-size: 1.8rem;
+        }
+        .ti-brand-vite { color: #646CFF; }
+        .ti-brand-react { color: #61DAFB; }
+        .ti-brand-typescript { color: #3178C6; }
+        .ti-brand-sass { color: #CD6799; }
+        .ti-brand-tailwind { color: #06B6D4; }
+        .ti-brand-firebase { color: #FFCA28; }
+      }
+      .links-container {
+        display: flex;
+        gap: .5rem;
         justify-content: flex-end;
-        margin-top: 1rem;
       }
       a {
         align-items: center;
@@ -99,7 +113,7 @@ const { projects } = dataCV
         background-color: #F5F5F5;
         border-radius: 100%;
         display: flex;
-        font-size: 2rem;
+        font-size: 1.8rem;
         justify-content: center;
         padding: .5rem;
         width: fit-content;

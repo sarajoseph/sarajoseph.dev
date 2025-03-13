@@ -220,6 +220,7 @@
       "description": "Projecte creat com a idea de projecte final del curs d'especialització de React.JS que vaig realitzar a IT Academy de Barcelona Activa. Es tracta d'una aplicació per trobar companys de viatge, unint-te a viatges creats per altres viatgers o crear viatges per a que altres viatgers s'uneixin.",
       "shortDescription": "Aplicació per trobar companys de viatge.",
       "stack": "Vite, ReactJS, Typescript, ChakraUI, Tailwind, Zustand, ESLint, Firebase",
+      "stackIcons": ["vite", "react", "typescript", "tailwindcss", "firebase"],
       "url": "https://cotravelers-sarajoseph.vercel.app",
       "github": "https://github.com/sarajoseph/cotravelers"
     },
@@ -230,6 +231,7 @@
       "description": "Web de restaurant fictici dissenyada com a demostració per a clients potencials. Presenta la carta de plats i begudes, informació sobre el restaurant i un formulari de contacte, oferint una experiència intuïtiva i atractiva.",
       "shortDescription": "Restaurant de tapas",
       "stack": "Vite, ReactJS, Typescript, Sass, ESLint, Firebase",
+      "stackIcons": ["vite", "react", "typescript", "sass", "firebase"],
       "url": "https://bocados-sarajoseph.vercel.app",
       "github": "https://github.com/sarajoseph/bocados"
     }
